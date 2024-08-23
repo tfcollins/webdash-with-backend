@@ -1,0 +1,4 @@
+dash[diskcache]
+celery
+sqlalchemy
+dash-bootstrap-components
