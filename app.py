@@ -13,9 +13,9 @@ for page in dash.page_registry.values():
     pages.append(dbc.NavItem(dbc.NavLink(page["name"], href=page["relative_path"])))
 
 navbar = dbc.NavbarSimple(
-    children=pages,
+    # children=pages,
     brand="Triton Production Test",
-    brand_href="#",
+    brand_href="/",
     color="primary",
     dark=True,
 )
@@ -31,4 +31,4 @@ app.layout = html.Div(
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=8050)

@@ -17,7 +17,7 @@ progress = dbc.Progress(
 layout = html.Div(
     [
         progress,
-        html.H1("Verify Hardware Configuration", style={"textAlign": "center"}),
+        html.H1("Upload Report", style={"textAlign": "center"}),
         dbc.Row(
             [
                 dbc.Col(
@@ -34,19 +34,12 @@ layout = html.Div(
                     style={"border-right": "3px solid black"},
                 ),
                 dbc.Col(
-                    [
-                        html.Img(
-                            id="hw_setup",
-                            src="/assets/hw_setup.png",
-                            # style={"width": "70%"},
-                        )
-                    ],
                     width=6,
                 ),
-                dbc.Col(),
             ]
         ),
         html.Br(),
+        dbc.Button("Back", href=page_info["prev"]),
         dbc.Button("Next", href=page_info["next"]),
     ]
 )

@@ -17,7 +17,7 @@ progress = dbc.Progress(
 layout = html.Div(
     [
         progress,
-        html.H1("Verify Hardware Configuration", style={"textAlign": "center"}),
+        html.H1("Build Information", style={"textAlign": "center"}),
         dbc.Row(
             [
                 dbc.Col(
@@ -35,18 +35,20 @@ layout = html.Div(
                 ),
                 dbc.Col(
                     [
-                        html.Img(
-                            id="hw_setup",
-                            src="/assets/hw_setup.png",
-                            # style={"width": "70%"},
-                        )
+                        # html.H2("Board Information"),
+                        dbc.Label("Serial Number:"),
+                        dbc.Input(
+                            "Serial Number", placeholder="Serial Number", type="text"
+                        ),
+                        dbc.Label("Build Date: (MM/DD/YYYY)"),
+                        dbc.Input("Build Date", placeholder="Build Date", type="text"),
                     ],
                     width=6,
                 ),
-                dbc.Col(),
             ]
         ),
         html.Br(),
+        dbc.Button("Back", href=page_info["prev"]),
         dbc.Button("Next", href=page_info["next"]),
     ]
 )

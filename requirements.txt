@@ -2,3 +2,5 @@ dash[diskcache]
 celery
 sqlalchemy
 dash-bootstrap-components
+pytest
+pytest-json-report
